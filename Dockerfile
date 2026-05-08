@@ -21,7 +21,7 @@ RUN mkdir -p /openclaw \
 WORKDIR /app
 
 COPY package.json pnpm-lock.yaml ./
-RUN corepack enable && pnpm install --prod
+RUN corepack enable && pnpm install --ignore-scripts && pnpm rebuild node-pty
 
 COPY src ./src
 COPY --chmod=755 entrypoint.sh ./entrypoint.sh
