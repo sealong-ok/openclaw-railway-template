@@ -2,6 +2,7 @@
 
 ## Purpose
 
+
 Convert chart images into structured data.
 
 ## Supported
